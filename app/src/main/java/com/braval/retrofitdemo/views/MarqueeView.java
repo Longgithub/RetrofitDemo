@@ -13,8 +13,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
-import com.mobanker.utils.DensityUtils;
-import com.mobanker.uzone.R;
+import com.braval.retrofitdemo.R;
+import com.braval.retrofitdemo.utils.DensityUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class MarqueeView extends ViewFlipper {
         animDuration = typedArray.getInteger(R.styleable.MarqueeViewStyle_mvAnimDuration, animDuration);
         if (typedArray.hasValue(R.styleable.MarqueeViewStyle_mvTextSize)) {
             textSize = (int) typedArray.getDimension(R.styleable.MarqueeViewStyle_mvTextSize, textSize);
-            textSize = (int)DensityUtils.px2sp(mContext, textSize);
+            textSize = (int) DensityUtils.px2sp(mContext, textSize);
         }
         textColor = typedArray.getColor(R.styleable.MarqueeViewStyle_mvTextColor, textColor);
         int gravityType = typedArray.getInt(R.styleable.MarqueeViewStyle_mvGravity, TEXT_GRAVITY_LEFT);

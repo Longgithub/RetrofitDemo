@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LockPatternView">
+        <attr name="aspect" format="string" />
+        <attr name="path" format="boolean" />
+        <attr name="stokewidth" format="float" />
+        <attr name="bitmapwidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="SpanVariableGridView">
+        <attr name="numColumns" format="integer" />
+        <attr name="itemMargin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="GeneralItemRelativeLayout">
+        <attr name="bottom_line_visible" format="boolean" />
+        <attr name="bottom_longer_line_visible" format="boolean" />
+        <attr name="top_line_visible" format="boolean" />
+        <attr name="top_longer_line_visible" format="boolean" />
+        <attr name="icon_background" format="reference" />
+        <attr name="indicator_background" format="reference" />
+        <attr name="icon_visible" format="boolean" />
+        <attr name="indicator_visible" format="boolean" />
+        <attr name="item_title_textColor" format="color|reference" />
+        <attr name="item_title_text" format="string" />
+        <attr name="status_text_color" format="color|reference" />
+        <attr name="item_status_text" format="string" />
+        <attr name="item_icon_height_minus" format="dimension" />
+        <attr name="item_icon_width_minus" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="JazzyViewPager">
+        <attr name="style">
+            <enum name="zoomin" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="standard" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="circleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="WaveLoadingView">
+        <attr name="wavecolor" format="color" />
+        <attr name="maskcolor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="AutofitTextView">
+        <attr name="minTextSize" format="dimension" />
+        <attr name="precision" format="float" />
+        <!-- Defines whether to automatically resize text to fit to the view's bounds. -->
+        <attr name="sizeToFit" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SeekArc">
+        <attr name="SeekArc_thumb" format="reference" />
+        <attr name="SeekArc_thumbOffset" format="dimension" />
+        <attr name="SeekArc_progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="SeekArc_progress" format="integer" />
+        <attr name="SeekArc_rotation" format="integer" />
+        <attr name="SeekArc_startAngle" format="integer" />
+        <attr name="SeekArc_sweepAngle" format="integer" />
+        <attr name="SeekArc_arcColor" format="color" />
+        <attr name="SeekArc_progressColor" format="color" />
+        <attr name="SeekArc_roundEdges" format="boolean" />
+        <attr name="SeekArc_touchInside" format="boolean" />
+        <attr name="SeekArc_clockwise" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="sl_shadowed" format="boolean" />
+        <attr name="sl_shadow_distance" format="dimension" />
+        <attr name="sl_shadow_angle" format="integer" />
+        <attr name="sl_shadow_radius" format="dimension" />
+        <attr name="sl_shadow_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference" />
+        <attr name="mvAnimDuration" format="integer|reference" />
+        <attr name="mvTextSize" format="dimension|reference" />
+        <attr name="mvTextColor" format="color|reference" />
+        <attr name="mvSingleLine" format="boolean" />
+        <attr name="mvMaxLength" format="integer|reference"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

@@ -4,14 +4,10 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.AppCompatEditText;
-import android.text.InputType;
 import android.text.Selection;
 import android.text.Spannable;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.AttributeSet;
 
-import com.mobanker.uzone.R;
 
 /**
  * Created by zhanglong on 2016/10/2.
@@ -38,7 +34,7 @@ public class TogglePasswordVisibilityEditText extends AppCompatEditText {
         visibilityDrawable = compoundDrawables[2];
         if (visibilityDrawable == null) {
             //初始图标
-            visibilityDrawable = getResources().getDrawable(R.drawable.visibility_off_icon);
+//            visibilityDrawable = getResources().getDrawable(R.drawable.visibility_off_icon);
         }
         setBackgroundColor(Color.TRANSPARENT);
     }
@@ -105,24 +101,24 @@ public class TogglePasswordVisibilityEditText extends AppCompatEditText {
     public void handleOnTouch() {
         if (getCompoundDrawables()[2] != null) {
             visibililty = !visibililty;
-            if (visibililty) {
-                if (mPasswordToggleListener != null) {
-                    mPasswordToggleListener.onVisibleToggle();
-                }
-                //要显示时图标
-                visibilityDrawable = getResources().getDrawable(R.drawable.visibility_on_icon);
-                this.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                this.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-            } else {
-                if (mPasswordToggleListener != null) {
-                    mPasswordToggleListener.onInvisibleToggle();
-                }
-                //隐藏密码
-                //要隐藏时图标
-                visibilityDrawable = getResources().getDrawable(R.drawable.visibility_off_icon);
-                this.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                this.setTransformationMethod(PasswordTransformationMethod.getInstance());
-            }
+//            if (visibililty) {
+//                if (mPasswordToggleListener != null) {
+//                    mPasswordToggleListener.onVisibleToggle();
+//                }
+//                //要显示时图标
+//                visibilityDrawable = getResources().getDrawable(R.drawable.visibility_on_icon);
+//                this.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+//                this.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+//            } else {
+//                if (mPasswordToggleListener != null) {
+//                    mPasswordToggleListener.onInvisibleToggle();
+//                }
+//                //隐藏密码
+//                //要隐藏时图标
+//                visibilityDrawable = getResources().getDrawable(R.drawable.visibility_off_icon);
+//                this.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+//                this.setTransformationMethod(PasswordTransformationMethod.getInstance());
+//            }
 
             //将光标定位到指定的位置
             CharSequence text = this.getText();

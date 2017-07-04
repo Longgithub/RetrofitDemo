@@ -3,4 +3,94 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#333333</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#c2c2c2</color>
+    <color name="grey_1">#717171</color>
+    <color name="blue">#6CA6CD</color>
+    <color name="blue_1">#586572</color>
+    <!-- 新卡推荐弹出框左边颜色 -->
+    <color name="white_2">#f6f6f6</color>
+    <color name="white_3">#eaeaea</color>
+    <!-- 还款提醒深蓝色文字 -->
+    <color name="translucent2">#00000000</color>
+
+    <!-- 我的卡片，灰色背景情况下的字体颜色 -->
+    <color name="gray_dark">#ff323232</color>
+
+    <!-- person activity -->
+    <color name="dark_grey">#555555</color>
+    <color name="mid_grey">#b3b3b3</color>
+    <color name="mid_red">#fb6666</color>
+
+    <!-- first activity text shadow -->
+    <color name="shadow1">#ff346797</color>
+    <color name="blue_11">#7db8f4</color>
+
+    <!-- loan activity -->
+    <color name="shadow2">#ffe1e1e1</color>
+
+    <color name="green">#ff53b359</color>
+    <color name="rate_calculator_amount_color">#40cbff</color>
+    <color name="bg_color_white">#fcfcfc</color>
+    <color name="bg_color_contact">#F2F2F5</color>
+    <color name="nava_white_color">#F5F9FD</color>
+    <color name="history_detail_left_color">#1B1D1F</color>
+    <color name="history_detail_status_color">#51B35A</color>
+    <color name="history_detail_right_color">#3D4449</color>
+    <color name="filter_view_bg_color">#dddddf</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_general_color">#44444e</color>
+    <color name="verify_page_title_text_color">#948976</color>
+    <color name="verify_page_desc_text_color">#929297</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#00000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="alert">#ff8787</color>
+    <color name="confirm">#9f9f9f</color>
+    <color name="info">#cc4ed17b</color>
+    <color name="nav_first_page_color">#ff84807c</color>
+    <color name="count_button_disable_color">#f9c8cbcd</color>
+    <color name="nav_black">#333333</color>
+    <color name="general_item_title_color">#44444e</color>
+    <color name="clear_text_hint_color">#b5babf</color>
+    <color name="repay_item_left_color">#909a9a</color>
+    <color name="repay_item_right_color">#4a4a4a</color>
+    <color name="actionsheet_gray">#f8f8f8</color>
+    <color name="freeze_amount">#EDB93F</color>
+    <color name="defalut_gray_text_color">#88888e</color>
+
+    <color name="bottom_or_top_filter_color">#b5b5b5</color>
+
+    <color name="color_bottom_menu_selected">#33333e</color>
+    <color name="color_bottom_menu_unselected">#a6a29d</color>
+    <!-- 已放款后字体颜色（未逾期）-->
+    <color name="product_not_expire_text_color">#ff9900</color>
+    <!-- 未获取额度时字体颜色-->
+    <color name="product_no_borrow_color">#ff7920</color>
+    <!-- 额度为零时字体颜色-->
+    <color name="product_amount_zero_color">#bbbbbe</color>
+    <!-- 可以发起借款时字体颜色-->
+    <color name="product_can_borrow_color">#54df99</color>
+    <!-- 逾期时颜色-->
+    <color name="product_expire_color">#ff6666</color>
+    <!-- 审核中颜色-->
+    <color name="product_in_progress">#40cbff</color>
+
+    <color name="product_freeze_color">#b8b9ba</color>
+    <color name="product_two_normal_color">#18c7b9</color>
+
+    <!--&lt;!&ndash;身份证扫描&ndash;&gt;-->
+    <!--<color name="viewfinder_mask">#60000000</color>-->
+    <!--<color name="result_view">#b0000000</color>-->
+    <!--<color name="actionsheet_gray">#8F8F8F</color>-->
+    <!--<color name="general_item_title_color">#ff424242</color>-->
+    <!--<color name="finance_navigation_color">#0bb9ee</color>-->
+    <!--<color name="bottom_or_top_filter_color">#dddddf</color>-->
+    <!--<color name="middle_filter_color">#dddddf</color>-->
 </resources>

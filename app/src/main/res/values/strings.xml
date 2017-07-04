@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">RetrofitDemo</string>
+
+
+    <string name="lockpattern_recording_incorrect_too_short">"至少连接4个点,请重试"</string>
+    <string name="lockpattern_error">错误,还可以再输%d次</string>
+    <string name="lockpattern_times_up">你已连续%d次输错手势，手势解锁已关闭，请重新登录</string>
+    <string name="lockscreen_access_pattern_start">Pattern started</string>
+    <string name="lockscreen_access_pattern_cleared">Pattern cleared</string>
+    <string name="lockscreen_access_pattern_cell_added">Cell added</string>
+    <string name="lockscreen_access_pattern_detected">Pattern completed</string>
 </resources>

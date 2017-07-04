@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 
-import com.mobanker.uzone.R;
+import com.braval.retrofitdemo.R;
 
 
 @SuppressWarnings("ALL")
@@ -40,7 +40,7 @@ public class ClearEditText extends EditText implements
         mClearDrawable = getCompoundDrawables()[2];
         if (mClearDrawable == null) {
 //	throw new NullPointerException("You can add drawableRight attribute in XML");
-            mClearDrawable = getResources().getDrawable(R.drawable.delete_selector);
+//            mClearDrawable = getResources().getDrawable(R.drawable.delete_selector);
         }
         setPadding(getPaddingLeft(), 0, getPaddingRight(), 0);
 //        mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight());

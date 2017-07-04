@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.TextView;
 
-import com.mobanker.uzone.R;
+import com.braval.retrofitdemo.R;
 
 
 public class CustomDialog extends ProgressDialog {

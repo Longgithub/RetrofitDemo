@@ -16,7 +16,7 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.mobanker.uzone.R;
+import com.braval.retrofitdemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

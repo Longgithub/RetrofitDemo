@@ -5,8 +5,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.text.TextUtils;
 
-import com.mobanker.uzone.utils.Consts;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,8 +20,8 @@ public class CheckUtils {
     public static boolean isAvailableMobilePhone(final String phone) {
         if (isEmptyString(phone))
             return false;
-        if (phone.length() != Consts.MobilePhoneLength)
-            return false;
+//        if (phone.length() != Consts.MobilePhoneLength)
+//            return false;
         if (StringFilter_phone(phone)) {
             return false;
         }

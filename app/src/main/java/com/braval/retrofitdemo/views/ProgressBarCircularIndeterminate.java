@@ -10,7 +10,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
-import com.mobanker.utils.DensityUtils;
+import com.braval.retrofitdemo.utils.DensityUtils;
 
 
 /**

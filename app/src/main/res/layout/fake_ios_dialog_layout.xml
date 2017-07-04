@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <!-- 关闭按钮-->
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:id="@+id/close_dialog"
+        />
+    <!-- 居中图片-->
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/close_dialog"
+        android:id="@+id/dialog_image"
+        android:layout_height="65dp" />
+    <TextView
+        android:id="@+id/fake_ios_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/rate_calculator_amount_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="获取语音验证码" />
+
+    <TextView
+        android:id="@+id/fake_ios_dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fake_ios_dialog_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/general_item_title_color"
+        android:textSize="14sp"
+        tools:text="验证码将以电话形式通知到您，请注意接听！"
+
+        />
+
+    <View
+        android:id="@+id/fake_ios_dialog_filter"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/fake_ios_dialog_message"
+        android:layout_marginTop="36dp"
+        android:background="@color/filter_view_bg_color" />
+
+    <LinearLayout
+        android:id="@+id/fake_ios_dialog_general_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/fake_ios_dialog_filter"
+        android:minHeight="30dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/fake_ios_dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:textColor="@color/rate_calculator_amount_color"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/filter_view_bg_color" />
+
+        <Button
+            android:id="@+id/fake_ios_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:textColor="@color/rate_calculator_amount_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fake_ios_dialog_netural_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/fake_ios_dialog_filter"
+        android:layout_toEndOf="@+id/fake_ios_dialog_general_bottom"
+        android:layout_toRightOf="@+id/fake_ios_dialog_general_bottom"
+        android:background="#00000000"
+        android:textColor="@color/rate_calculator_amount_color"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

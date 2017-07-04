@@ -1,23 +1,20 @@
 package com.braval.retrofitdemo.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mobanker.utils.DensityUtils;
-import com.mobanker.uzone.R;
+import com.braval.retrofitdemo.utils.DensityUtils;
+
 
 /**
  * Author: zhanglong
- * Date:   2014/11/15.
  */
 @SuppressWarnings("deprecation")
 public class GeneralItemRelativeLayout extends RelativeLayout {
@@ -34,9 +31,7 @@ public class GeneralItemRelativeLayout extends RelativeLayout {
     boolean bottom_longer_line_visible;
     boolean top_line_visible;
     boolean top_longer_line_visible;
-    // --Commented out by Inspection (2015/5/26 17:19):boolean top_line_visible;
     Drawable icon_background;
-    // --Commented out by Inspection (2015/5/26 17:19):Drawable indicator_background;
     boolean icon_visible = true;
     boolean indicator_visible = true;
     int item_title_textColor = Color.rgb(48, 48, 48);
@@ -52,15 +47,15 @@ public class GeneralItemRelativeLayout extends RelativeLayout {
 
     void init() {
         LayoutInflater inflater = LayoutInflater.from(getContext());
-        inflater.inflate(R.layout.general_item_layout, this);
-        mIcon = (ImageView) findViewById(R.id.icon);
-        itemtitle = (TextView) findViewById(R.id.item_title);
-        itemStatus = (TextView) findViewById(R.id.item_status);
-        indicator = (ImageView) findViewById(R.id.indicator);
-        bottom_line = findViewById(R.id.bottom_line);
-        bottom_longer_line = findViewById(R.id.bottom_longer_line);
-        top_line = findViewById(R.id.top_line);
-        top_longer_line = findViewById(R.id.top_longer_line);
+//        inflater.inflate(R.layout.general_item_layout, this);
+//        mIcon = (ImageView) findViewById(R.id.icon);
+//        itemtitle = (TextView) findViewById(R.id.item_title);
+//        itemStatus = (TextView) findViewById(R.id.item_status);
+//        indicator = (ImageView) findViewById(R.id.indicator);
+//        bottom_line = findViewById(R.id.bottom_line);
+//        bottom_longer_line = findViewById(R.id.bottom_longer_line);
+//        top_line = findViewById(R.id.top_line);
+//        top_longer_line = findViewById(R.id.top_longer_line);
         mIcon.setVisibility(icon_visible ? View.VISIBLE : View.GONE);
         if (null != icon_background) {
             int iconWidth = icon_background.getIntrinsicWidth();
@@ -93,23 +88,23 @@ public class GeneralItemRelativeLayout extends RelativeLayout {
     public GeneralItemRelativeLayout(final Context context, final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
         ctx = context;
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.GeneralItemRelativeLayout, defStyle, 0);
-        if (a != null) {
-            bottom_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_bottom_line_visible, true);
-            bottom_longer_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_bottom_longer_line_visible, false);
-            top_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_top_line_visible, false);
-            top_longer_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_top_longer_line_visible, false);
-            icon_background = a.getDrawable(R.styleable.GeneralItemRelativeLayout_icon_background);
-            icon_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_icon_visible, true);
-            indicator_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_indicator_visible, true);
-            item_title_textColor = a.getColor(R.styleable.GeneralItemRelativeLayout_item_title_textColor, getResources().getColor(R.color.general_item_title_color));
-            item_title_text = a.getString(R.styleable.GeneralItemRelativeLayout_item_title_text);
-            status_text_color = a.getColor(R.styleable.GeneralItemRelativeLayout_status_text_color, Color.BLACK);
-            item_status_text = a.getString(R.styleable.GeneralItemRelativeLayout_item_status_text);
-            item_icon_height_minus = a.getDimension(R.styleable.GeneralItemRelativeLayout_item_icon_height_minus, TypedValue.COMPLEX_UNIT_DIP);
-            item_icon_width_minus = a.getDimension(R.styleable.GeneralItemRelativeLayout_item_icon_width_minus, TypedValue.COMPLEX_UNIT_DIP);
-            a.recycle();
-        }
+//        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.GeneralItemRelativeLayout, defStyle, 0);
+//        if (a != null) {
+//            bottom_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_bottom_line_visible, true);
+//            bottom_longer_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_bottom_longer_line_visible, false);
+//            top_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_top_line_visible, false);
+//            top_longer_line_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_top_longer_line_visible, false);
+//            icon_background = a.getDrawable(R.styleable.GeneralItemRelativeLayout_icon_background);
+//            icon_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_icon_visible, true);
+//            indicator_visible = a.getBoolean(R.styleable.GeneralItemRelativeLayout_indicator_visible, true);
+//            item_title_textColor = a.getColor(R.styleable.GeneralItemRelativeLayout_item_title_textColor, getResources().getColor(R.color.general_item_title_color));
+//            item_title_text = a.getString(R.styleable.GeneralItemRelativeLayout_item_title_text);
+//            status_text_color = a.getColor(R.styleable.GeneralItemRelativeLayout_status_text_color, Color.BLACK);
+//            item_status_text = a.getString(R.styleable.GeneralItemRelativeLayout_item_status_text);
+//            item_icon_height_minus = a.getDimension(R.styleable.GeneralItemRelativeLayout_item_icon_height_minus, TypedValue.COMPLEX_UNIT_DIP);
+//            item_icon_width_minus = a.getDimension(R.styleable.GeneralItemRelativeLayout_item_icon_width_minus, TypedValue.COMPLEX_UNIT_DIP);
+//            a.recycle();
+//        }
         init();
 //        parseAttributes(ctx,attrs);
     }
