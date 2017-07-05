@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="150dp"
+             android:layout_height="40dp"
+    android:gravity="center_vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/voice_code_view"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        >
+
+        <TextView
+            android:id="@+id/countdown_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="60s"
+            android:textColor="#d1d1d2"
+            android:textSize="14sp"
+            />
+
+        <View
+            android:id="@+id/middle_filter"
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@+id/countdown_text"
+            android:layout_toRightOf="@+id/countdown_text"
+            android:background="@color/rate_calculator_amount_color"/>
+
+        <TextView
+            android:id="@+id/send_voice_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toRightOf="@+id/middle_filter"
+            android:maxLines="1"
+            android:clickable="true"
+            android:text="收不到验证码"
+            android:textColor="@color/rate_calculator_amount_color"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sms_code_view"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:text="@string/btn_get_authcode"
+        android:textColor="@color/rate_calculator_amount_color"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+         />
+
+</RelativeLayout>
