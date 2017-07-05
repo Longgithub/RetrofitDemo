@@ -59,7 +59,6 @@
         android:gravity="center"
         android:textStyle="bold"
         android:clickable="true"
-        android:text="@string/btn_get_authcode"
         android:textColor="@color/rate_calculator_amount_color"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"

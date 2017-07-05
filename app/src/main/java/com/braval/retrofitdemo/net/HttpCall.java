@@ -1,13 +1,11 @@
-package com.braval.retrofitdemo.net.Converter;
+package com.braval.retrofitdemo.net;
 
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
-import com.braval.retrofitdemo.HttpCallService;
-import com.braval.retrofitdemo.HttpResponseCallback;
 import com.braval.retrofitdemo.net.converter.JsonConverterFactory;
 import com.braval.retrofitdemo.utils.CustomLogger;
 
-import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -41,7 +39,7 @@ import rx.subscriptions.CompositeSubscription;
 public class HttpCall {
     private static volatile HttpCall sInstance;
     private HttpCallService mHttpCallService;
-    private static HttpCallConfiguration mConfiguration;
+    static HttpCallConfiguration mConfiguration;
 
     static {
         RxJavaPlugins.getInstance().registerErrorHandler(new RxJavaErrorHandler() {
@@ -88,7 +86,7 @@ public class HttpCall {
 
         // 添加https支持
         if (mConfiguration.getKeystoreStream() != null && mConfiguration.getKeyPassword() != null) {
-            SSLSocketFactory sslSocketFactory = HttpsCertificates.getCertificates(
+            SSLSocketFactory sslSocketFactory = com.braval.retrofitdemo.net.HttpsCertificates.getCertificates(
                     mConfiguration.getKeystoreStream(), mConfiguration.getKeyPassword());
             if (sslSocketFactory != null) {
                 builder.sslSocketFactory(sslSocketFactory);
@@ -110,7 +108,7 @@ public class HttpCall {
                 // add rxjava support
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
-        mHttpCallService = mRetrofit.create(HttpCallService.class);
+        mHttpCallService = mRetrofit.create(com.braval.retrofitdemo.net.HttpCallService.class);
     }
 
     /**
@@ -118,7 +116,7 @@ public class HttpCall {
      *
      * @param configuration 配置
      */
-    public static void init(HttpCallConfiguration configuration) {
+    public static void init(com.braval.retrofitdemo.net.HttpCallConfiguration configuration) {
         mConfiguration = configuration;
     }
 
@@ -157,7 +155,7 @@ public class HttpCall {
      */
     private void postBasic(final String api,
                            JSONObject options,
-                           final HttpResponseCallback callback,
+                           final com.braval.retrofitdemo.net.HttpResponseCallback callback,
                            final CompositeSubscription subscriptions) {
         /**
          * Add Common Param
@@ -214,7 +212,7 @@ public class HttpCall {
      */
     public void post(final String api,
                      final JSONObject options,
-                     final HttpResponseCallback callback,
+                     final com.braval.retrofitdemo.net.HttpResponseCallback callback,
                      final CompositeSubscription subscriptions) {
         postBasic(api, options, callback, subscriptions);
     }
@@ -230,7 +228,7 @@ public class HttpCall {
      */
     private void getBasic(final String api,
                           final JSONObject options,
-                          final HttpResponseCallback callback,
+                          final com.braval.retrofitdemo.net.HttpResponseCallback callback,
                           final CompositeSubscription subscriptions) {
         Subscription subscription =
                 mHttpCallService.get(api, options)
@@ -253,7 +251,7 @@ public class HttpCall {
      */
     public void get(final String api,
                     final JSONObject options,
-                    final HttpResponseCallback callback,
+                    final com.braval.retrofitdemo.net.HttpResponseCallback callback,
                     final CompositeSubscription subscriptions) {
         getBasic(api, options, callback, subscriptions);
     }
@@ -270,7 +268,7 @@ public class HttpCall {
      */
     private Subscriber<JSONObject> responseSubscriber(final String api,
                                                       final JSONObject options,
-                                                      final HttpResponseCallback callback,
+                                                      final com.braval.retrofitdemo.net.HttpResponseCallback callback,
                                                       final boolean isPost,
                                                       final CompositeSubscription subscriptions) {
         return new Subscriber<JSONObject>() {
@@ -288,8 +286,8 @@ public class HttpCall {
             public void onNext(JSONObject jsonObject) {
                 CustomLogger.d("response: " + api + " : " + jsonObject.toString() + "\nparams" + options);
                 try {
-                    if (!HttpResponseAnalyzer.statusOk(jsonObject)) {
-                        String error_code = HttpResponseAnalyzer.getErrorCode(jsonObject);
+                    if (!com.braval.retrofitdemo.net.HttpResponseAnalyzer.statusOk(jsonObject)) {
+                        String error_code = com.braval.retrofitdemo.net.HttpResponseAnalyzer.getErrorCode(jsonObject);
 //                        if (HttpConstants.PERMISSON_DENIED.equals(error_code)) {
 //                            // 用户登录超时或会话超时或用户在其他地方登陆
 //                            callback.onHandleSessionTimeout(HttpConstants.PERMISSON_DENIED.equals(error_code));

@@ -1,4 +1,4 @@
-package com.braval.retrofitdemo.net.Converter;
+package com.braval.retrofitdemo.net;
 
 import java.io.InputStream;
 import java.security.KeyStore;

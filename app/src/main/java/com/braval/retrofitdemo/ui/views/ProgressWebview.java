@@ -8,7 +8,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,9 +20,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-
-import com.mobanker.uzone.R;
-import com.mobanker.uzone.utils.Consts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,8 +67,6 @@ public class ProgressWebview extends WebView {
         this.context = context;
         progressbar = new ProgressBar(context, null, android.R.attr.progressBarStyleHorizontal);
         progressbar.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, 2, 0, 0));
-        progressbar.setProgressDrawable(context.getResources().getDrawable(R.drawable
-                .bar_progress_webview));
         addView(progressbar);
         setWebChromeClient(new CustomWebChromeClient());
 
@@ -95,8 +89,6 @@ public class ProgressWebview extends WebView {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                if (Consts.DEBUG)
-                    Log.d("onPageStarted", url);
             }
         });
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

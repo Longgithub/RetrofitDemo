@@ -1,7 +1,6 @@
-package com.braval.retrofitdemo.net.Converter;
+package com.braval.retrofitdemo.net;
 
 
-import com.braval.retrofitdemo.HttpResponseCallback;
 import com.braval.retrofitdemo.base.IBaseView;
 import com.braval.retrofitdemo.utils.NoticeUtils;
 
@@ -47,7 +46,7 @@ public class HttpDataModel {
                      final boolean isNeedProgressDialog,
                      final boolean isNeedCode,
                      final String msg,
-                     final HttpResponseCallback callback) {
+                     final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
 
         if (view != null && !view.isNetworkAvailable()) {
             return;
@@ -62,7 +61,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).post(requestApi, options,
-                    new HttpResponseCallback() {
+                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -111,7 +110,7 @@ public class HttpDataModel {
                      final boolean isNeedProgressDialog,
                      final boolean isNeedCode,
                      final String msg,
-                     final HttpResponseCallback callback) {
+                     final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
 
         if (view != null && !view.isNetworkAvailable()) {
             return;
@@ -126,7 +125,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(baseURL).post(requestApi, options,
-                    new HttpResponseCallback() {
+                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -195,7 +194,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).get(requestApi, options,
-                    new HttpResponseCallback() {
+                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -250,7 +249,7 @@ public class HttpDataModel {
                     final boolean isNeedProgressDialog,
                     final boolean isNeedCode,
                     final String msg,
-                    final HttpResponseCallback callback) {
+                    final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
         if (view != null && !view.isNetworkAvailable()) {
             return;
         }
@@ -265,7 +264,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).get(requestApi, options,
-                    new HttpResponseCallback() {
+                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {

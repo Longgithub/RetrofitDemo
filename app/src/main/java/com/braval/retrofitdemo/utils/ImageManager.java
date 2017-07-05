@@ -18,19 +18,11 @@ package com.braval.retrofitdemo.utils;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
-import android.graphics.BitmapFactory;
 import android.media.ExifInterface;
 import android.os.Environment;
 import android.util.Log;
 
-import com.mobanker.uzone.utils.Consts;
-import com.mobanker.uzone.utils.UZoneUtils;
-
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -61,43 +53,43 @@ public class ImageManager {
         OutputStream outputStream = null;
         String filePath = null;
         Bitmap mBitmap = null;
-        try {
-            File dir = new File(Consts.ROOT_PATH.replace(Consts.FilePathPrefix, ""));
-            if (!dir.exists())
-                dir.mkdirs();
-            filePath = dir.getPath() + fileName;
-            File file = new File(dir.getPath(), fileName);
-            mBitmap = (BitmapFactory.decodeByteArray(jpegData, 0, jpegData.length));
-            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
-            if (null != mBitmap) {
-                mBitmap.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
-                try {
-                    outputStream2.flush();
-                    outputStream2.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-            //jpegData=;
-
-            outputStream = new FileOutputStream(file);
-            if (source != null) {
-                source.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
-                degree[0] = getExifOrientation(filePath);
-            } else {
-//                outputStream.write(jpegData);
-                outputStream.write(outputStream2.toByteArray());
-                degree[0] = getExifOrientation(filePath);
-            }
-        } catch (FileNotFoundException ex) {
-            Log.w(TAG, ex);
-            return null;
-        } catch (IOException ex) {
-            Log.w(TAG, ex);
-            return null;
-        } finally {
-            UZoneUtils.closeSilently(outputStream);
-        }
+//        try {
+//            File dir = new File(Consts.ROOT_PATH.replace(Consts.FilePathPrefix, ""));
+//            if (!dir.exists())
+//                dir.mkdirs();
+//            filePath = dir.getPath() + fileName;
+//            File file = new File(dir.getPath(), fileName);
+//            mBitmap = (BitmapFactory.decodeByteArray(jpegData, 0, jpegData.length));
+//            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
+//            if (null != mBitmap) {
+//                mBitmap.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
+//                try {
+//                    outputStream2.flush();
+//                    outputStream2.close();
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//            //jpegData=;
+//
+//            outputStream = new FileOutputStream(file);
+//            if (source != null) {
+//                source.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
+//                degree[0] = getExifOrientation(filePath);
+//            } else {
+////                outputStream.write(jpegData);
+//                outputStream.write(outputStream2.toByteArray());
+//                degree[0] = getExifOrientation(filePath);
+//            }
+//        } catch (FileNotFoundException ex) {
+//            Log.w(TAG, ex);
+//            return null;
+//        } catch (IOException ex) {
+//            Log.w(TAG, ex);
+//            return null;
+//        } finally {
+//            UZoneUtils.closeSilently(outputStream);
+//        }
         return mBitmap;
     }
 

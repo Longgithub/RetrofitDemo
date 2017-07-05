@@ -1,4 +1,4 @@
-package com.braval.retrofitdemo.net.Converter;
+package com.braval.retrofitdemo.net;
 
 /**
  * Created by zhanglong on 2017/7/3.
