@@ -20,7 +20,7 @@ public class CheckUtils {
     public static boolean isAvailableMobilePhone(final String phone) {
         if (isEmptyString(phone))
             return false;
-//        if (phone.length() != Consts.MobilePhoneLength)
+//        if (phone.length() != NetConsts.MobilePhoneLength)
 //            return false;
         if (StringFilter_phone(phone)) {
             return false;

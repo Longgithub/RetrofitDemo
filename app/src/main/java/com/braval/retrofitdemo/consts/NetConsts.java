@@ -1,10 +1,10 @@
-package com.braval.retrofitdemo;
+package com.braval.retrofitdemo.consts;
 
 /**
  * Created by zhanglong on 2017/7/3.
  */
 
-public class Consts {
+public class NetConsts {
     /**
      * 上传图片截断标识
      */

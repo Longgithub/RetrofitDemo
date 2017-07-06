@@ -169,7 +169,7 @@ public class HttpCall {
 //            options.put("phoneModel", Build.MODEL);
 //            options.put("marketChannel", UZoneApplication.channel);
 //            options.put("ip", DataRepository.getInstance().getLocalIp());
-//            if (Consts.GATEWAY_ENABLED) {
+//            if (NetConsts.GATEWAY_ENABLED) {
 //                options = encryptyRequestBody(options);
 //            }
 //        } catch (Throwable e) {
@@ -187,13 +187,13 @@ public class HttpCall {
 
 //    private JSONObject encryptyRequestBody(JSONObject requestBody) throws Exception {
 //        //RSA加密
-//        String encyptString = Base64.encode(RSAUtil.encryptByPublicKey(requestBody.toString().getBytes("UTF-8"), Consts.RSA_PUBLIC_KEY));
+//        String encyptString = Base64.encode(RSAUtil.encryptByPublicKey(requestBody.toString().getBytes("UTF-8"), NetConsts.RSA_PUBLIC_KEY));
 //        JSONObject object = new JSONObject();
 //        try {
 //            //在此对请求加密
-//            object.put("merchantsNo", Consts.MERCHANT_NO);
-//            object.put("sign", SignUtil.Sign(requestBody.toString(), "MD5", Consts.MD5_SIGN));
-//            object.put("moduleName", Consts.MERCHANT_MOUDLE_NAME);
+//            object.put("merchantsNo", NetConsts.MERCHANT_NO);
+//            object.put("sign", SignUtil.Sign(requestBody.toString(), "MD5", NetConsts.MD5_SIGN));
+//            object.put("moduleName", NetConsts.MERCHANT_MOUDLE_NAME);
 //            object.put("timestamp", System.currentTimeMillis());
 //            object.put("data", encyptString);
 //

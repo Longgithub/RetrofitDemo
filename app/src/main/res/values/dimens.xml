@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="animator_notice_view_height">48</dimen>
-    <dimen name="topnav_height">54</dimen>
+    <dimen name="animator_notice_view_height">48dp</dimen>
+    <dimen name="topnav_height">54dp</dimen>
 </resources>

@@ -54,7 +54,7 @@ public class ImageManager {
         String filePath = null;
         Bitmap mBitmap = null;
 //        try {
-//            File dir = new File(Consts.ROOT_PATH.replace(Consts.FilePathPrefix, ""));
+//            File dir = new File(NetConsts.ROOT_PATH.replace(NetConsts.FilePathPrefix, ""));
 //            if (!dir.exists())
 //                dir.mkdirs();
 //            filePath = dir.getPath() + fileName;
@@ -62,7 +62,7 @@ public class ImageManager {
 //            mBitmap = (BitmapFactory.decodeByteArray(jpegData, 0, jpegData.length));
 //            ByteArrayOutputStream outputStream2 = new ByteArrayOutputStream();
 //            if (null != mBitmap) {
-//                mBitmap.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
+//                mBitmap.compress(CompressFormat.JPEG, NetConsts.JPEG_HIGH_QUALITY, outputStream2);
 //                try {
 //                    outputStream2.flush();
 //                    outputStream2.close();
@@ -74,7 +74,7 @@ public class ImageManager {
 //
 //            outputStream = new FileOutputStream(file);
 //            if (source != null) {
-//                source.compress(CompressFormat.JPEG, Consts.JPEG_HIGH_QUALITY, outputStream2);
+//                source.compress(CompressFormat.JPEG, NetConsts.JPEG_HIGH_QUALITY, outputStream2);
 //                degree[0] = getExifOrientation(filePath);
 //            } else {
 ////                outputStream.write(jpegData);

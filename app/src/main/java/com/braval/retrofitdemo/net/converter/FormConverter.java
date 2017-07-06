@@ -2,7 +2,7 @@ package com.braval.retrofitdemo.net.converter;
 
 import android.util.ArrayMap;
 
-import com.braval.retrofitdemo.Consts;
+import com.braval.retrofitdemo.consts.NetConsts;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,10 +28,10 @@ public class FormConverter<T> implements Converter<T, RequestBody> {
         for (String key : keys) {
             String key_value = converValue.get(key);
             if (null != key_value) {
-                if (key_value.contains(Consts.SPECIFIC_UPLOAD_IMG)) {
-                    int index = key_value.indexOf(Consts.SPECIFIC_UPLOAD_IMG);
+                if (key_value.contains(NetConsts.SPECIFIC_UPLOAD_IMG)) {
+                    int index = key_value.indexOf(NetConsts.SPECIFIC_UPLOAD_IMG);
                     String pic_name = key_value.substring(0, index);
-                    String file_path = key_value.substring(index + Consts.SPECIFIC_UPLOAD_IMG.length());
+                    String file_path = key_value.substring(index + NetConsts.SPECIFIC_UPLOAD_IMG.length());
 
                     multiBuilder.addFormDataPart(key, pic_name, RequestBody.create(MediaType.parse("image/*"), new File(file_path)));
                 } else {

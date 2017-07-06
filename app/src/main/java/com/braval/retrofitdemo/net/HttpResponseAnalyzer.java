@@ -1,6 +1,6 @@
 package com.braval.retrofitdemo.net;
 
-import com.braval.retrofitdemo.Consts;
+import com.braval.retrofitdemo.consts.NetConsts;
 
 import org.json.JSONObject;
 
@@ -15,7 +15,7 @@ public class HttpResponseAnalyzer {
      * @return The status
      */
     public static boolean statusOk(JSONObject jsonObject) {
-        int status = jsonObject.optInt(Consts.RESULTKEY_STATUS, 0);
+        int status = jsonObject.optInt(NetConsts.RESULTKEY_STATUS, 0);
         return 1==status;
     }
 
@@ -25,7 +25,7 @@ public class HttpResponseAnalyzer {
      * @return The code
      */
     public static String getErrorCode(JSONObject jsonObject) {
-        return jsonObject.optString(Consts.RESULTKEY_ERROR, "");
+        return jsonObject.optString(NetConsts.RESULTKEY_ERROR, "");
     }
 
     /**
@@ -34,6 +34,6 @@ public class HttpResponseAnalyzer {
      * @return The error message
      */
     public static String getErrorMsg(JSONObject jsonObject) {
-        return jsonObject.optString(Consts.RESULTKEY_MSG, "");
+        return jsonObject.optString(NetConsts.RESULTKEY_MSG, "");
     }
 }

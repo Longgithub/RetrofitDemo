@@ -19,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by zhanglong on 2017/7/6.
+ * @author zhanglong
  */
 
 public abstract class BaseActivity extends AppCompatActivity implements OnTopNavigationListener ,IBaseView{

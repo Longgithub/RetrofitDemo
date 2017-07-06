@@ -134,7 +134,7 @@ public class JavaScriptInterfaceContract {
     //以下为JS调用本地插件化方法
     @JavascriptInterface
     public void plugin(String pluginID, String param) {
-//        if (Consts.DEBUG)
+//        if (NetConsts.DEBUG)
 //            Log.d("plugin", pluginID + "|" + param);
         if (null != param) {
             if ("navigate".equals(pluginID)) {
@@ -389,46 +389,46 @@ public class JavaScriptInterfaceContract {
 //        intent.putExtra("page", pageId);
 //        if ("Page_Home".equals(pageId)) {
 //            intent.setClass(mContext, MainActivity.class);
-//        } else if (Consts.Page_Bankcard.equals(pageId)) {
+//        } else if (NetConsts.Page_Bankcard.equals(pageId)) {
 //            intent.setClass(mContext, Bankcard.class);
-//        } else if (Consts.Page_SingleLoan.equals(pageId) || Consts.Page_InstallmentLoan.equals(pageId)) {
+//        } else if (NetConsts.Page_SingleLoan.equals(pageId) || NetConsts.Page_InstallmentLoan.equals(pageId)) {
 //            intent.setClass(mContext, IWantLoan.class);
-//        } else if (Consts.Page_RepayGuide.equals(pageId) || Consts.Page_LoanGuide.equals(pageId)) {
+//        } else if (NetConsts.Page_RepayGuide.equals(pageId) || NetConsts.Page_LoanGuide.equals(pageId)) {
 //            intent.setClass(mContext, UServiceDetailActivity.class);
-//        } else if (Consts.Page_ConsignAuthorize.equals(pageId) ||
-//                Consts.Page_threeSidesAgreement.equals(pageId) ||
-//                Consts.Page_uServiceAgreement.equals(pageId) ||
-//                Consts.Page_privatePolicy.equals(pageId) ||
-//                Consts.Page_uLoanPartServiceAgreement.equals(pageId)) {
+//        } else if (NetConsts.Page_ConsignAuthorize.equals(pageId) ||
+//                NetConsts.Page_threeSidesAgreement.equals(pageId) ||
+//                NetConsts.Page_uServiceAgreement.equals(pageId) ||
+//                NetConsts.Page_privatePolicy.equals(pageId) ||
+//                NetConsts.Page_uLoanPartServiceAgreement.equals(pageId)) {
 //            intent.setClass(mContext, LoanContract.class);
-//        } else if (Consts.Page_repayStyle.equals(pageId) ||
-//                   Consts.Page_baiduRepay.equals(pageId)
+//        } else if (NetConsts.Page_repayStyle.equals(pageId) ||
+//                   NetConsts.Page_baiduRepay.equals(pageId)
 //                ) {
 //            intent.setClass(mContext, RepayWayActivity.class);
-//        } else if (Consts.Page_yijianRepay.equals(pageId)) {
+//        } else if (NetConsts.Page_yijianRepay.equals(pageId)) {
 //            intent.setClass(mContext, OneKeyRepayWay.class);
-//        } else if (Consts.Page_yibao_newCard.equals(pageId)) {
+//        } else if (NetConsts.Page_yibao_newCard.equals(pageId)) {
 //            intent.setClass(mContext, YiBaoWithoutCard.class);
-//        } else if (Consts.Page_yibao_HasCard.equals(pageId)) {
+//        } else if (NetConsts.Page_yibao_HasCard.equals(pageId)) {
 //            intent.setClass(mContext, YiBaoWithCard.class);
-//        } else if (Consts.Page_YijianSucc.equals(pageId) ||
-//                   Consts.Page_yibaoRepay.equals(pageId)) {
+//        } else if (NetConsts.Page_YijianSucc.equals(pageId) ||
+//                   NetConsts.Page_yibaoRepay.equals(pageId)) {
 //            intent.setClass(mContext, RepaySuccess.class);
-//        } else if (Consts.Page_AlipayAuth.equals(pageId)) {
+//        } else if (NetConsts.Page_AlipayAuth.equals(pageId)) {
 //            intent.setClass(mContext, VerifyAlipay.class);
-//        } else if (Consts.Page_GetAmount_Simple.equals(pageId)) {
+//        } else if (NetConsts.Page_GetAmount_Simple.equals(pageId)) {
 //            intent.setClass(mContext, GetAmount.class);
-//        } else if (Consts.Page_Banner_Detail.equals(pageId) || Consts.Page_Flash.equals(pageId)) {
+//        } else if (NetConsts.Page_Banner_Detail.equals(pageId) || NetConsts.Page_Flash.equals(pageId)) {
 //            intent.setClass(mContext, BannerActivity.class);
-//        } else if (Consts.Page_UU_Detail.equals(pageId)) {
+//        } else if (NetConsts.Page_UU_Detail.equals(pageId)) {
 //            intent.setClass(mContext, UUDetail.class);
-//        } else if (Consts.Page_noPay.equals(pageId)) {
+//        } else if (NetConsts.Page_noPay.equals(pageId)) {
 //            intent.setClass(mContext, NoNeedRepay.class);
-//        } else if (Consts.Page_InstallmentBills.equals(pageId)) {
+//        } else if (NetConsts.Page_InstallmentBills.equals(pageId)) {
 //            intent.setClass(mContext, PayMentInstall.class);
-//        } else if (Consts.Page_Login.equals(pageId)) {
+//        } else if (NetConsts.Page_Login.equals(pageId)) {
 //            intent.setClass(mContext, LoginActivity.class);
-//        } else if (Consts.Page_SingleRepay.equals(pageId)) {
+//        } else if (NetConsts.Page_SingleRepay.equals(pageId)) {
 //            intent.setClass(mContext, IWantRepay.class);
 //        }
 //

@@ -2,7 +2,6 @@ package com.braval.retrofitdemo.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         DaggerMainComponent.builder().mainMoudle(new MainMoudle(this)).build().inject(this);
         mViewHolder=new ViewHolder(view);
         mainPresenter.showIp();
-        Log.d("response","init");
     }
 
     @Override

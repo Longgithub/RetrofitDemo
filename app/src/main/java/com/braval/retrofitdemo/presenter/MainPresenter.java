@@ -38,7 +38,6 @@ public class MainPresenter implements MainContract.Presenter{
 
     @Override
     public void showIp() {
-        Log.d("response","here");
         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.ipify.org/").addConverterFactory(StringConverterFactory.create()).build();
         HttpCallService service = retrofit.create(HttpCallService.class);
         Call<String> call = service.getIPOnline();
