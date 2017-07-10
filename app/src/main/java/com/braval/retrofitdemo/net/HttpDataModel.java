@@ -30,14 +30,15 @@ public class HttpDataModel {
     }
 
     /**
-     * @param view
-     * @param requestApi
-     * @param options
-     * @param subscription
-     * @param isNeedProgressDialog
-     * @param isNeedCode
-     * @param msg
-     * @param callback
+     * POST 请求
+     * @param view                  宿主view
+     * @param requestApi            接口名称
+     * @param options               参数
+     * @param subscription          订阅者
+     * @param isNeedProgressDialog  是否需要进度展示框
+     * @param isNeedCode            是否需要code
+     * @param msg                   请求进度框的文字
+     * @param callback              请求结果回调
      */
     public void post(final IBaseView view,
                      final String requestApi,
@@ -46,7 +47,7 @@ public class HttpDataModel {
                      final boolean isNeedProgressDialog,
                      final boolean isNeedCode,
                      final String msg,
-                     final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
+                     final HttpResponseCallback callback) {
 
         if (view != null && !view.isNetworkAvailable()) {
             return;
@@ -61,7 +62,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).post(requestApi, options,
-                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
+                    new HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -100,7 +101,15 @@ public class HttpDataModel {
 
 
     /**
-     * 为不同产品的地址而配置
+     * POST 请求
+     * @param view                  宿主view
+     * @param requestApi            接口名称
+     * @param options               参数
+     * @param subscription          订阅者
+     * @param isNeedProgressDialog  是否需要进度展示框
+     * @param isNeedCode            是否需要code
+     * @param msg                   请求进度框的文字
+     * @param callback              请求结果回调
      */
     public void post(final String baseURL,
                      final IBaseView view,
@@ -110,7 +119,7 @@ public class HttpDataModel {
                      final boolean isNeedProgressDialog,
                      final boolean isNeedCode,
                      final String msg,
-                     final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
+                     final HttpResponseCallback callback) {
 
         if (view != null && !view.isNetworkAvailable()) {
             return;
@@ -125,7 +134,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(baseURL).post(requestApi, options,
-                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
+                    new HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -163,14 +172,15 @@ public class HttpDataModel {
     }
 
     /**
-     * @param view
-     * @param requestApi
-     * @param options
-     * @param subscription
-     * @param isNeedProgressDialog
-     * @param isNeedCode
-     * @param msg
-     * @param callback
+     * POST 请求
+     * @param view                  宿主view
+     * @param requestApi            接口名称
+     * @param options               参数
+     * @param subscription          订阅者
+     * @param isNeedProgressDialog  是否需要进度展示框
+     * @param isNeedCode            是否需要code
+     * @param msg                   请求进度框的文字
+     * @param callback              请求结果回调
      */
     public void get(final IBaseView view,
                     final String requestApi,
@@ -194,7 +204,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).get(requestApi, options,
-                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
+                    new HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
@@ -233,14 +243,14 @@ public class HttpDataModel {
     }
 
     /**
-     * @param view
-     * @param requestApi
-     * @param options
-     * @param subscription
-     * @param isNeedProgressDialog
-     * @param isNeedCode
-     * @param msg
-     * @param callback
+     * @param view                  宿主view
+     * @param requestApi            api
+     * @param options               参数
+     * @param subscription          订阅者
+     * @param isNeedProgressDialog  是否需要进度框
+     * @param isNeedCode            是否需要code
+     * @param msg                   进度框文字
+     * @param callback              请求结果回调
      */
     public void get(final IBaseView view,
                     final String requestApi,
@@ -249,7 +259,7 @@ public class HttpDataModel {
                     final boolean isNeedProgressDialog,
                     final boolean isNeedCode,
                     final String msg,
-                    final com.braval.retrofitdemo.net.HttpResponseCallback callback) {
+                    final HttpResponseCallback callback) {
         if (view != null && !view.isNetworkAvailable()) {
             return;
         }
@@ -264,7 +274,7 @@ public class HttpDataModel {
 //                }
 //            }
             HttpCall.getInstance(null).get(requestApi, options,
-                    new com.braval.retrofitdemo.net.HttpResponseCallback() {
+                    new HttpResponseCallback() {
                         @Override
                         public void onSuccess(JSONObject jsonObject) {
                             if (view != null && isNeedProgressDialog) {
