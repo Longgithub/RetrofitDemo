@@ -95,7 +95,6 @@ public class ProgressWebview extends WebView {
             if (0 != (context.getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE)) {
                 WebView.setWebContentsDebuggingEnabled(true);
             }
-
         }
     }
 
@@ -116,7 +115,6 @@ public class ProgressWebview extends WebView {
 
     public interface IWebChromeClientListener {
         void onReceivedTitle(WebView view, String title);
-
         void onProgressChanged(WebView view, int newProgress);
     }
 

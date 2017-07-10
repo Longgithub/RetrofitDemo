@@ -38,4 +38,5 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:2.5'
     compile 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha3'
+    compile 'com.android.support:design:26.0.0-alpha1'
 }
